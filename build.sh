@@ -7,10 +7,10 @@ if [ ! -d "$DIRECTORY" ]; then
     --depth=1 \
     --recurse-submodules \
     --single-branch \
-    --branch=master https://github.com/valhalla/conf.git
+    --branch=master https://github.com/arogi/conf.git
 fi
 
 docker build \
-  --tag wouldgo/valhalla \
+  --tag arogi/valhalla \
   --force-rm \
   .

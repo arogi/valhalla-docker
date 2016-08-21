@@ -1,7 +1,10 @@
 FROM ubuntu:trusty
-MAINTAINER Dario Andrei <wouldgo84@gmail.com>
+MAINTAINER Alan Glennon <glennon@gmail.com>
 
 ENV TERM xterm
+
+COPY *.pbf /
+
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y git \
   libtool \
@@ -30,7 +33,7 @@ ADD ./conf /conf
 
 RUN ldconfig
 
-RUN wget https://s3.amazonaws.com/metro-extracts.mapzen.com/trento_italy.osm.pbf
+# RUN wget https://s3.amazonaws.com/metro-extracts.mapzen.com/trento_italy.osm.pbf
 
 RUN mkdir -p /data/valhalla
 RUN valhalla_build_admins -c conf/valhalla.json *.pbf

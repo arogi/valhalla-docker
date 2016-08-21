@@ -4,6 +4,11 @@ This [Dockerfile](https://docs.docker.com/engine/reference/builder/) provides an
 
 ---
 
+Note to Contributors:
+Building a Docker image using ./build.sh may create a conf directory in your local repo. If you make changes to the repo, make sure you do not push this redundant directory up to GitHub. The conf files are best accessed via: github.com/valhalla/conf.git or github.com/arogi/conf.git
+
+---
+
 ***Not ready to mess with Docker or Chef? Mapzen provides hosted versions of these services under the names Turn-by-Turn, Matrix, and Elevation. Sign up for a free developer key at https://mapzen.com/developers/***
 
 ---
